@@ -16,4 +16,4 @@ done
 }
 
 # original_data
-cp /mnt/ssd/thaddywu/rinput/newbench/geninputs geninputs -r
+cp /mnt/ssd/thaddywu/rinput/newbench/geninputs . -r
