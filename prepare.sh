@@ -15,6 +15,22 @@ for b in airport usedcars transit credit movie1; do
 done
 }
 
-# original_data
+new_data() {
+# cp -r /mnt/ssd/thaddywu/rinput/newbench/config/tpcds/adjusted_data .
+
+rm adjusted_data -r
+mkdir -p tpcds
+python3 copy_tpcds.py /mnt/ssd/thaddywu/rinput/newbench/config/tpcds/adjusted_data
+
+for b in airport usedcars transit credit movie1; do
+#cp /mnt/ssd/thaddywu/rinput/newbench/src/*/data/input*.csv
+    mkdir -p $b
+    rm $b/*
+    cp /mnt/ssd/thaddywu/rinput/newbench/src/$b/data/input*.csv $b
+done
+}
+
+# original_data, old version
+new_data
 rm -r geninputs
 cp /mnt/ssd/thaddywu/rinput/newbench/geninputs . -r
