@@ -16,4 +16,5 @@ done
 }
 
 # original_data
+rm -r geninputs
 cp /mnt/ssd/thaddywu/rinput/newbench/geninputs . -r
