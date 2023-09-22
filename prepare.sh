@@ -18,7 +18,7 @@ done
 new_data() {
 # cp -r /mnt/ssd/thaddywu/rinput/newbench/config/tpcds/adjusted_data .
 
-rm adjusted_data -r
+rm adjusted_data tpcds -r
 mkdir -p tpcds
 python3 copy_tpcds.py /mnt/ssd/thaddywu/rinput/newbench/config/tpcds/adjusted_data
 
